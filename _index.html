@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Charles J Read</title>
+  <meta name="description" content="Essays by Charles J Read on investing, crypto, consumer technology, and operating.">
+  <meta name="author" content="Charles J Read">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Writing — Charles J Read">
+  <meta property="og:description" content="Essays on investing, crypto, consumer technology, and operating.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://charlesjread.xyz/writing">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Writing — Charles J Read">
+  <meta name="twitter:description" content="Essays on investing, crypto, consumer technology, and operating.">
+
+  <!-- Favicon: same CJR mark as homepage -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23faf9f6'/%3E%3Ctext x='32' y='42' font-family='ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace' font-size='22' font-weight='500' text-anchor='middle' fill='%23111'%3ECJR%3C/text%3E%3C/svg%3E">
+
+  <!-- IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --ink: #111111;
+      --ink-muted: #555555;
+      --rule: #d8d6d0;
+      --column: 680px;
+      --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-mono);
+      font-size: 15px;
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      padding: 72px 32px 120px;
+      max-width: var(--column);
+      margin: 0 auto;
+    }
+
+    /* Top nav — minimal return link */
+    .nav {
+      margin-bottom: 56px;
+      font-size: 14px;
+      color: var(--ink-muted);
+    }
+
+    .nav a {
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    /* Page header */
+    header {
+      margin-bottom: 56px;
+    }
+
+    h1 {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0 0 24px;
+    }
+
+    h1::before {
+      content: "§ ";
+      color: var(--ink-muted);
+    }
+
+    .intro {
+      margin: 0;
+      color: var(--ink-muted);
+    }
+
+    /* Essay list */
+    .essays {
+      margin-top: 48px;
+    }
+
+    .essay-entry {
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 16px;
+    }
+
+    .essay-date {
+      color: var(--ink-muted);
+      font-size: 13px;
+      padding-top: 2px;
+    }
+
+    .essay-title-link {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      font-weight: 500;
+      transition: text-decoration-thickness 120ms ease;
+    }
+
+    .essay-title-link:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    .essay-description {
+      color: var(--ink-muted);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    /* Empty state */
+    .empty-state {
+      color: var(--ink-muted);
+      font-style: normal;
+      margin-top: 48px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 96px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      color: var(--ink-muted);
+      font-size: 13px;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      body {
+        padding: 48px 24px 80px;
+        font-size: 14px;
+      }
+      h1 { font-size: 14px; }
+      .essay-entry {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      .essay-date {
+        font-size: 12px;
+      }
+    }
+
+    ::selection {
+      background: var(--ink);
+      color: var(--bg);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="/">← Charles J Read</a>
+  </div>
+
+  <header>
+    <h1>Writing</h1>
+    <p class="intro">
+      Notes on investing, operating, and the markets I spend time in.
+    </p>
+  </header>
+
+  <div class="essays">
+    <!--
+      Essay entries go here. Format:
+
+      <div class="essay-entry">
+        <div class="essay-date">April 2026</div>
+        <div>
+          <a class="essay-title-link" href="/writing/slug-goes-here">Essay title goes here</a>
+          <div class="essay-description">One-line description of the essay.</div>
+        </div>
+      </div>
+    -->
+
+    <p class="empty-state">No essays yet.</p>
+  </div>
+
+  <footer>
+    © Charles J Read
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- REPLACE: title, description, canonical URL -->
+  <title>Essay title — Charles J Read</title>
+  <meta name="description" content="One-line description of the essay for SEO and link previews.">
+  <meta name="author" content="Charles J Read">
+  <link rel="canonical" href="https://charlesjread.xyz/writing/ESSAY-SLUG">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Essay title">
+  <meta property="og:description" content="One-line description of the essay.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://charlesjread.xyz/writing/ESSAY-SLUG">
+  <meta property="article:author" content="Charles J Read">
+  <meta property="article:published_time" content="2026-04-24">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Essay title">
+  <meta name="twitter:description" content="One-line description of the essay.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23faf9f6'/%3E%3Ctext x='32' y='42' font-family='ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace' font-size='22' font-weight='500' text-anchor='middle' fill='%23111'%3ECJR%3C/text%3E%3C/svg%3E">
+
+  <!-- JSON-LD Article schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Essay title",
+    "author": {
+      "@type": "Person",
+      "name": "Charles J Read",
+      "url": "https://charlesjread.xyz"
+    },
+    "datePublished": "2026-04-24",
+    "description": "One-line description of the essay."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --ink: #111111;
+      --ink-muted: #555555;
+      --rule: #d8d6d0;
+      --column: 640px;
+      --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-mono);
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      padding: 72px 32px 120px;
+      max-width: var(--column);
+      margin: 0 auto;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* Top nav */
+    .nav {
+      margin-bottom: 56px;
+      font-size: 13px;
+      color: var(--ink-muted);
+    }
+
+    .nav a {
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    /* Essay title */
+    h1 {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 0 0 16px;
+      letter-spacing: -0.005em;
+    }
+
+    /* Essay metadata */
+    .meta {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 56px;
+    }
+
+    /* Body */
+    article p {
+      margin: 0 0 24px;
+    }
+
+    article p:first-of-type::first-line {
+      /* no drop-cap or special treatment — brutalist discipline */
+    }
+
+    /* Subheadings inside essay */
+    article h2 {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 48px 0 20px;
+    }
+
+    article h2::before {
+      content: "§ ";
+      color: var(--ink-muted);
+    }
+
+    /* Emphasis */
+    em { font-style: italic; }
+    strong { font-weight: 600; }
+
+    /* Links in body */
+    article a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: text-decoration-thickness 120ms ease;
+    }
+
+    article a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    /* Blockquotes — rarely used, but styled for the case */
+    blockquote {
+      margin: 32px 0;
+      padding-left: 20px;
+      border-left: 2px solid var(--rule);
+      color: var(--ink-muted);
+    }
+
+    blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Section break */
+    .break {
+      text-align: center;
+      color: var(--ink-muted);
+      margin: 40px 0;
+      letter-spacing: 0.3em;
+      font-size: 13px;
+    }
+
+    .break::before {
+      content: "· · ·";
+    }
+
+    /* Footnote-style reference */
+    .ref {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 96px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      color: var(--ink-muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer a {
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      body {
+        padding: 48px 24px 80px;
+        font-size: 14px;
+        line-height: 1.75;
+      }
+      h1 { font-size: 19px; }
+      article h2 { font-size: 14px; }
+    }
+
+    ::selection {
+      background: var(--ink);
+      color: var(--bg);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="/writing">← Writing</a>
+  </div>
+
+  <h1>Essay title goes here</h1>
+  <div class="meta">Charles J Read · April 2026</div>
+
+  <article>
+
+    <p>First paragraph of the essay. Lead with the claim or the observation. Do not open with "I've been thinking a lot about..." or any other hook-bait preamble. The reader clicked the title — they are already committed. Use the first paragraph to deliver value, not to justify the essay's existence.</p>
+
+    <p>Second paragraph continues the argument. Paragraphs should be 2-5 sentences. Long paragraphs are the number one reason readers bounce on mono body text — the uniform visual rhythm fatigues faster than in serif, so shorter paragraphs matter more here than they would in other typefaces.</p>
+
+    <p>Use <em>italics</em> for emphasis sparingly. Use <strong>bold</strong> almost never — maybe once per essay, for a single structural point you want to survive a skim.</p>
+
+    <div class="break"></div>
+
+    <h2>Optional subheading</h2>
+
+    <p>Subheadings are optional. For essays under 1500 words, skip them entirely. For longer essays, use 2-4 maximum. They should name the move the section makes, not summarise its content. "Why the market is wrong about X" beats "Market analysis."</p>
+
+    <p>For inline links, <a href="https://example.com">write naturally</a> and let the underline do the work. Don't write "click here" or "read more" — name the destination.</p>
+
+    <div class="break"></div>
+
+    <p>Closing paragraph. End on a specific claim, a concrete observation, or a question worth sitting with. Do not end with a call to action, a subscribe prompt, or a summary of what you just said.</p>
+
+  </article>
+
+  <footer>
+    <span>© Charles J Read</span>
+    <a href="/writing">All writing</a>
+  </footer>
+
+</body>
+</html>
